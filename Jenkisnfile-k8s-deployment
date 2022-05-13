@@ -5,7 +5,7 @@ pipeline{
             steps{
             script{
                 withCredentials([kubeconfigFile(credentialsId: 'kubernetes-config', variable: 'KUBECONFIG')]) {
-                   sh ' kubectl get po '
+                   sh ' kubectl get pod '
                 }
               }
             }
